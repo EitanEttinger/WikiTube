@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stocks.css">
+    <title>WikiTube</title>
+</head>
+
+<body onload="onInit()">
+
+  <!-- ---------------------ORIGIN-CODE----------------------------------------------------------------------------- -->
+
+
+  <header>
+    <h1>WikiTube</h1>
+    <a class="youtube-link" href="http://">YOUTUBE LINK</a>
+
+    <input class="list-value-input" id="list-value-input" type="search" list="values" name="list-value-input"
+      placeholder="Choose Singer" />
+    <datalist id="values">
+      <option value="Bob Marley" label="bob marley"></option>
+      <option value="Eytan Peled" label="eytan peled"></option>
+      <option value="Damien Rice" label="damien rice"></option>
+      <option value="John Mayer" label="john mayer"></option>
+      <option value="Bob Dylan" label="bob dylan"></option>
+    </datalist>
+  </header>
+
+  <section class="loader hide">
+    <img src="img/loading.svg" alt="" />
+  </section>
+
+  <section class="msg hide">
+    <h3>Not a valid stock</h3>
+  </section>
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+
+    <main class="main-container">
+
+        <section class="search-container">
+
+            <form class="form">
+                <input type="search" name="inp-search" class="inp-search" placeholder="Search" />
+                <button class="btn-search"> Search </button>
+            </form>
+
+            <div class="top-search-results">
+
+            </div>
+
+        </section>
+
+
+
+        <section class="main-content-container">
+          
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/LsJid5LM12U">
+            </iframe>
+
+            <div class="wikipedia-container">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <h4> CoffeeRights 2023 | By Eitan Ettinger </h4>
+    </footer>
+
+  <script src="lib/jquery.js"></script>
+  <script src="lib/axios.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="lib/swal.js"></script>
+  <script src="js/services/util.service.js"></script>
+  <script src="lib/chart.min.js"></script>
+  <script src="js/services/storage.service.js"></script>
+  <script src="js/services/stock.service.js"></script>
+  <script src="js/stock.controller.js"></script>
+
+</body>
+</html>
